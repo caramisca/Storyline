@@ -1,0 +1,921 @@
+{
+  "title": "And Then There Were None: Deeply Branched Edition",
+  "description": "A significantly expanded interactive retelling with detailed acts, scene references, extended next-button sequences, and multiple sub-branches.",
+  "startNode": "act1_node1",
+  "variables": {
+    "playerName": "",
+    "playerMotivation": "",
+    "trustLevels": {
+      "Vera Claythorne": 0,
+      "Philip Lombard": 0,
+      "William Blore": 0,
+      "Dr. Armstrong": 0,
+      "Emily Brent": 0,
+      "General Macarthur": 0,
+      "Tony Marston": 0,
+      "Judge Wargrave": 0,
+      "Mr. Rogers": 0,
+      "Mrs. Rogers": 0
+    },
+    "suspicionLevels": {
+      "Vera Claythorne": 0,
+      "Philip Lombard": 0,
+      "William Blore": 0,
+      "Dr. Armstrong": 0,
+      "Emily Brent": 0,
+      "General Macarthur": 0,
+      "Tony Marston": 0,
+      "Judge Wargrave": 0,
+      "Mr. Rogers": 0,
+      "Mrs. Rogers": 0
+    },
+    "cluesFound": [],
+    "actProgress": "Act I",
+    "extraFlags": {
+      "foundSecretPassage": false,
+      "heardBasementNoises": false,
+      "investigatedLockedRoom": false
+    }
+  },
+  "nodes": {
+    "act1_node1": {
+      "id": "act1_node1",
+      "act": "Act I",
+      "scene": "ActI_Intro",
+      "animation": "OpenLetterAnim",
+      "title": "Opening Scene: The Letter",
+      "unfoldSteps": [
+        {
+          "text": "Your day begins normally until you discover a peculiar letter in your mailbox, sealed with dark red wax."
+        },
+        {
+          "text": "The letter invites you to Indian Island, claiming your specific skills are 'vital' and that all expenses will be covered."
+        },
+        {
+          "text": "The signature is cryptic: simply 'U.N. Owen.' You sense a puzzle hidden behind these formal words."
+        }
+      ],
+      "options": [
+        {
+          "text": "Next: Reflect on the invitation",
+          "nextNode": "act1_node2"
+        }
+      ]
+    },
+
+    "act1_node2": {
+      "id": "act1_node2",
+      "act": "Act I",
+      "scene": "ActI_Intro",
+      "animation": "LetterCloseAnim",
+      "title": "Deciding the Reason",
+      "unfoldSteps": [
+        {
+          "text": "You hold the letter, uncertain but intrigued. Why would you go?"
+        }
+      ],
+      "inputPrompt": "Please enter your name:",
+      "options": [
+        {
+          "text": "A) 'Yes, I’ll gladly accept... (relaxing weekend job)'",
+          "setVariable": { "playerMotivation": "Employment" },
+          "nextNode": "act1_node3"
+        },
+        {
+          "text": "B) 'I have reservations... (pay is good)'",
+          "setVariable": { "playerMotivation": "Good Pay" },
+          "nextNode": "act1_node3"
+        },
+        {
+          "text": "C) 'I don’t trust this... (curiosity)'",
+          "setVariable": { "playerMotivation": "Curiosity" },
+          "nextNode": "act1_node3"
+        }
+      ]
+    },
+
+    "act1_node3": {
+      "id": "act1_node3",
+      "act": "Act I",
+      "scene": "ActI_Dock",
+      "animation": "BoatArrivalAnim",
+      "title": "Arrival on Indian Island",
+      "unfoldSteps": [
+        {
+          "text": "A few days later, you find yourself aboard a small ferry cutting through misty waters."
+        },
+        {
+          "text": "Waves crash against jagged rocks as you near Indian Island’s weathered dock."
+        },
+        {
+          "text": "A figure—Mr. Rogers, the butler—greets you. He's polite but tense, and escorts you up a winding path toward a looming mansion."
+        }
+      ],
+      "options": [
+        {
+          "text": "Next: Enter the mansion foyer",
+          "nextNode": "act1_node4"
+        }
+      ]
+    },
+
+    "act1_node4": {
+      "id": "act1_node4",
+      "act": "Act I",
+      "scene": "ActI_Foyer",
+      "animation": "MeetGuestsAnim",
+      "title": "Meeting the Characters",
+      "unfoldSteps": [
+        {
+          "text": "In the foyer, eight others stand talking in hushed tones."
+        },
+        {
+          "text": "One by one, they introduce themselves: Vera Claythorne, Philip Lombard, William Blore, Dr. Armstrong, Emily Brent, General Macarthur, Tony Marston, and Judge Wargrave."
+        },
+        {
+          "text": "Each has been summoned by the mysterious Mr. Owen for varying reasons, none of which seem entirely clear."
+        }
+      ],
+      "options": [
+        {
+          "text": "Greet them politely",
+          "effect": {
+            "adjustTrust": {
+              "Vera Claythorne": 1,
+              "Philip Lombard": 1,
+              "William Blore": 1,
+              "Dr. Armstrong": 1,
+              "Emily Brent": 1,
+              "General Macarthur": 1,
+              "Tony Marston": 1,
+              "Judge Wargrave": 1
+            }
+          },
+          "nextNode": "act1_node5"
+        },
+        {
+          "text": "Keep your distance, observing quietly",
+          "effect": {
+            "adjustSuspicion": {
+              "Vera Claythorne": 1,
+              "Philip Lombard": 1,
+              "William Blore": 1
+            }
+          },
+          "nextNode": "act1_node5"
+        }
+      ]
+    },
+
+    "act1_node5": {
+      "id": "act1_node5",
+      "act": "Act I",
+      "scene": "ActI_Tour",
+      "animation": "HouseTourAnim",
+      "title": "House Tour",
+      "unfoldSteps": [
+        {
+          "text": "Mr. Rogers guides everyone around the mansion: an elegant Foyer, a Drawing Room with ten peculiar figurines, a Dining Room fit for formal meals, and a well-stocked Library."
+        },
+        {
+          "text": "You also pass Guest Rooms, a Kitchen, and a locked Study rumored to belong to Mr. Owen. No one has seen the host yet."
+        }
+      ],
+      "options": [
+        {
+          "text": "Inspect the ten figurines in the Drawing Room",
+          "nextNode": "act1_node_figures"
+        },
+        {
+          "text": "Ask Mr. Rogers about Mr. Owen’s absence",
+          "nextNode": "act1_node_askRogers"
+        },
+        {
+          "text": "Proceed to your assigned Guest Room to unpack",
+          "nextNode": "act1_node_guestroom"
+        }
+      ]
+    },
+
+    "act1_node_figures": {
+      "id": "act1_node_figures",
+      "act": "Act I",
+      "scene": "ActI_DrawingRoom",
+      "animation": "FigurineInspectAnim",
+      "title": "Drawing Room Oddity",
+      "unfoldSteps": [
+        {
+          "text": "Ten small soldier-like figurines rest on the mantel."
+        },
+        {
+          "text": "You recall a nursery rhyme about 'Ten Little Indians.' A chill passes over you as you consider the significance."
+        }
+      ],
+      "options": [
+        {
+          "text": "Discuss the figurines with Vera",
+          "effect": {
+            "adjustTrust": { "Vera Claythorne": 1 }
+          },
+          "nextNode": "act1_node6"
+        },
+        {
+          "text": "Note them silently and rejoin the group",
+          "nextNode": "act1_node6"
+        }
+      ]
+    },
+
+    "act1_node_askRogers": {
+      "id": "act1_node_askRogers",
+      "act": "Act I",
+      "scene": "ActI_Foyer",
+      "animation": "TalkRogersAnim",
+      "title": "Asking About Mr. Owen",
+      "text": "Mr. Rogers hesitates. 'Mr. Owen hasn’t arrived, sir/madam. We only have instructions to prepare for guests. He’s quite... private.' His discomfort is evident.",
+      "options": [
+        {
+          "text": "Press him for more info",
+          "effect": {
+            "adjustSuspicion": { "Mr. Rogers": 1 }
+          },
+          "nextNode": "act1_node6"
+        },
+        {
+          "text": "Accept his explanation and move on",
+          "nextNode": "act1_node6"
+        }
+      ]
+    },
+
+    "act1_node_guestroom": {
+      "id": "act1_node_guestroom",
+      "act": "Act I",
+      "scene": "ActI_GuestRoom",
+      "animation": "GuestRoomAnim",
+      "title": "Settling In",
+      "unfoldSteps": [
+        {
+          "text": "Your room offers a view of the stormy sea. A framed copy of 'Ten Little Indians' sits on the bedside table."
+        },
+        {
+          "text": "The rhyme’s lines are unsettling, but you can’t quite place why."
+        }
+      ],
+      "options": [
+        {
+          "text": "Read the rhyme thoroughly",
+          "nextNode": "act1_node6"
+        },
+        {
+          "text": "Ignore it and head back out",
+          "nextNode": "act1_node6"
+        }
+      ]
+    },
+
+    "act1_node6": {
+      "id": "act1_node6",
+      "act": "Act I",
+      "scene": "ActI_DiningRoom",
+      "animation": "GramophoneSetupAnim",
+      "title": "Dinner and an Ominous Recording",
+      "unfoldSteps": [
+        {
+          "text": "That evening, you and the other guests gather in the Dining Room for dinner. The meal is lavish, if tense."
+        },
+        {
+          "text": "Suddenly, a gramophone crackles to life. A voice accuses each guest—including you—of a hidden crime."
+        },
+        {
+          "text": "Silence follows. Fear and outrage erupt as the recording ends."
+        }
+      ],
+      "options": [
+        {
+          "text": "A) Demand answers (confront everyone)",
+          "effect": {
+            "adjustSuspicion": {
+              "Philip Lombard": 1,
+              "Emily Brent": 1
+            }
+          },
+          "nextNode": "act1_node7"
+        },
+        {
+          "text": "B) Deny wrongdoing (defend yourself)",
+          "effect": {
+            "adjustTrust": { "Judge Wargrave": 1 }
+          },
+          "nextNode": "act1_node7"
+        },
+        {
+          "text": "C) Stay silent (observe reactions)",
+          "effect": {
+            "adjustSuspicion": { "William Blore": 1 },
+            "adjustTrust": { "Dr. Armstrong": 1 }
+          },
+          "nextNode": "act1_node7"
+        }
+      ]
+    },
+
+    "act1_node7": {
+      "id": "act1_node7",
+      "act": "Act I",
+      "scene": "ActI_Cliffhanger",
+      "animation": "TensionRisesAnim",
+      "title": "End of Act I",
+      "text": "Tension soars. Doubt and fear flicker in each guest’s eyes. Tomorrow promises darker revelations. Act I ends here.",
+      "options": [
+        {
+          "text": "Proceed to Act II",
+          "setVariable": { "actProgress": "Act II" },
+          "nextNode": "act2_node1"
+        }
+      ]
+    },
+
+    "act2_node1": {
+      "id": "act2_node1",
+      "act": "Act II",
+      "scene": "ActII_Morning",
+      "animation": "TonyDeathAnim",
+      "title": "Tony Marston’s Death",
+      "unfoldSteps": [
+        {
+          "text": "Morning reveals a grim discovery: Tony Marston is dead at the table, apparently from poisoned whiskey."
+        },
+        {
+          "text": "Panic spreads. Vera is visibly shaken, while others suspect foul play."
+        }
+      ],
+      "options": [
+        {
+          "text": "Examine Tony’s glass for clues",
+          "effect": {
+            "addClue": "PoisonedGlass"
+          },
+          "nextNode": "act2_node2"
+        },
+        {
+          "text": "Comfort Vera (she's distraught)",
+          "effect": {
+            "adjustTrust": { "Vera Claythorne": 2 },
+            "adjustSuspicion": { "Dr. Armstrong": 1 }
+          },
+          "nextNode": "act2_node2"
+        }
+      ]
+    },
+
+    "act2_node2": {
+      "id": "act2_node2",
+      "act": "Act II",
+      "scene": "ActII_Night",
+      "animation": "NightTensionAnim",
+      "title": "Nighttime Tension",
+      "unfoldSteps": [
+        {
+          "text": "Each guest locks themselves in their room at night. A storm brews offshore, thunder rumbling in the distance."
+        },
+        {
+          "text": "You can’t sleep. The events replay in your mind. Why mention everyone’s secrets? Who is orchestrating this?"
+        }
+      ],
+      "options": [
+        {
+          "text": "Check on Emily Brent (appears calm but possibly frightened)",
+          "effect": {
+            "adjustTrust": { "Emily Brent": 1 }
+          },
+          "nextNode": "act2_node3"
+        },
+        {
+          "text": "Search the corridor for anything suspicious",
+          "effect": {
+            "adjustSuspicion": { "William Blore": 1 }
+          },
+          "nextNode": "act2_node_corridorInvestigation"
+        },
+        {
+          "text": "Stay in your room to feel safe",
+          "nextNode": "act2_node3"
+        }
+      ]
+    },
+
+    "act2_node_corridorInvestigation": {
+      "id": "act2_node_corridorInvestigation",
+      "act": "Act II",
+      "scene": "ActII_Corridor",
+      "animation": "CorridorCreakAnim",
+      "title": "Corridor Investigation",
+      "unfoldSteps": [
+        {
+          "text": "You creep through the dimly lit hallway, footsteps echoing."
+        },
+        {
+          "text": "A door at the far end rattles slightly, as if someone is inside. Could it be Mr. Owen, or another guest?"
+        }
+      ],
+      "options": [
+        {
+          "text": "Open the rattling door",
+          "effect": {
+            "setVariable": {
+              "extraFlags.investigatedLockedRoom": "true"
+            }
+          },
+          "nextNode": "act2_node_lockedRoom"
+        },
+        {
+          "text": "Retreat to your room, unnerved",
+          "nextNode": "act2_node3"
+        }
+      ]
+    },
+
+    "act2_node_lockedRoom": {
+      "id": "act2_node_lockedRoom",
+      "act": "Act II",
+      "scene": "ActII_LockedRoom",
+      "animation": "LockedDoorAnim",
+      "title": "The Locked Room",
+      "text": "You ease open the door and find... an empty storage closet. Old boxes and dusty furniture. A single faint footprint leads out, disappearing at the threshold.",
+      "options": [
+        {
+          "text": "Collect old letter (clue)",
+          "effect": {
+            "addClue": "MysteriousLetter",
+            "adjustSuspicion": { "Judge Wargrave": 1 }
+          },
+          "nextNode": "act2_node3"
+        }
+      ]
+    },
+
+    "act2_node3": {
+      "id": "act2_node3",
+      "act": "Act II",
+      "scene": "ActII_Morning2",
+      "animation": "MrsRogersAnim",
+      "title": "Second Death: Mrs. Rogers",
+      "unfoldSteps": [
+        {
+          "text": "Daylight brings another tragedy—Mrs. Rogers found dead in her bed. 'She never woke up,' Mr. Rogers laments."
+        },
+        {
+          "text": "The supply boat fails to arrive, stranding everyone on the island."
+        }
+      ],
+      "options": [
+        {
+          "text": "Volunteer to search the island’s perimeter with Blore, Lombard, and Armstrong",
+          "nextNode": "act2_node4a"
+        },
+        {
+          "text": "Stay in the mansion to question other guests (Vera, Emily, Wargrave)",
+          "nextNode": "act2_node4b"
+        },
+        {
+          "text": "Investigate a faint noise from the basement (optional)",
+          "effect": {
+            "setVariable": {
+              "extraFlags.heardBasementNoises": "true"
+            }
+          },
+          "nextNode": "act2_node_basement"
+        }
+      ]
+    },
+
+    "act2_node_basement": {
+      "id": "act2_node_basement",
+      "act": "Act II",
+      "scene": "ActII_Basement",
+      "animation": "BasementCreakAnim",
+      "title": "Basement Exploration",
+      "unfoldSteps": [
+        {
+          "text": "You descend uneven steps into a dank basement. Shadows dance on stone walls."
+        },
+        {
+          "text": "Among crates, you find old records and documents referencing 'ten figurines.' A cryptic note warns: 'Each must pay for their crime.'"
+        }
+      ],
+      "options": [
+        {
+          "text": "Gather basement documents as clues",
+          "effect": {
+            "addClue": "BasementRecords"
+          },
+          "nextNode": "act2_node4b"
+        },
+        {
+          "text": "Rush upstairs, unsettled",
+          "nextNode": "act2_node4b"
+        }
+      ]
+    },
+
+    "act2_node4a": {
+      "id": "act2_node4a",
+      "act": "Act II",
+      "scene": "ActII_CoastSearch",
+      "animation": "CoastSearchAnim",
+      "title": "Searching the Coast",
+      "unfoldSteps": [
+        {
+          "text": "You traverse rocky beaches. No sign of a hidden boat or Mr. Owen. Tensions run high."
+        },
+        {
+          "text": "Blore suspects Lombard is hiding something. Armstrong tries to mediate. You notice footprints that vanish at the tide line."
+        }
+      ],
+      "options": [
+        {
+          "text": "Confront Lombard about secrets",
+          "effect": {
+            "adjustSuspicion": { "Philip Lombard": 2 }
+          },
+          "nextNode": "act2_node5"
+        },
+        {
+          "text": "Suggest returning inside to regroup",
+          "nextNode": "act2_node5"
+        }
+      ]
+    },
+
+    "act2_node4b": {
+      "id": "act2_node4b",
+      "act": "Act II",
+      "scene": "ActII_IndoorsSearch",
+      "animation": "MansionCluesAnim",
+      "title": "Investigating Indoors",
+      "unfoldSteps": [
+        {
+          "text": "You question Vera, Emily Brent, and Judge Wargrave. Paranoia laces every word."
+        },
+        {
+          "text": "Hidden diaries or letters suggest each guest might bear guilt. No direct evidence emerges—only suspicion."
+        }
+      ],
+      "options": [
+        {
+          "text": "Accuse someone openly",
+          "effect": {
+            "adjustSuspicion": {
+              "Emily Brent": 1,
+              "Judge Wargrave": 1
+            }
+          },
+          "nextNode": "act2_node5"
+        },
+        {
+          "text": "Offer calm reasoning, urging cooperation",
+          "effect": {
+            "adjustTrust": {
+              "Vera Claythorne": 1,
+              "Judge Wargrave": 1
+            }
+          },
+          "nextNode": "act2_node5"
+        }
+      ]
+    },
+
+    "act2_node5": {
+      "id": "act2_node5",
+      "act": "Act II",
+      "scene": "ActII_Macarthur",
+      "animation": "MacarthurDeathAnim",
+      "title": "General Macarthur’s Death",
+      "unfoldSteps": [
+        {
+          "text": "Soon, a harrowing discovery: General Macarthur is found dead by the shore—struck on the head."
+        },
+        {
+          "text": "Three victims now. Everyone suspects each other. The figurines on the mantel are missing three pieces."
+        }
+      ],
+      "options": [
+        {
+          "text": "Accuse a search-party member",
+          "effect": {
+            "adjustSuspicion": {
+              "Philip Lombard": 1,
+              "William Blore": 1
+            }
+          },
+          "nextNode": "act2_node6"
+        },
+        {
+          "text": "Search for footprints or clues at the scene",
+          "effect": {
+            "addClue": "MacarthurFootprints"
+          },
+          "nextNode": "act2_node6"
+        }
+      ]
+    },
+
+    "act2_node6": {
+      "id": "act2_node6",
+      "act": "Act II",
+      "scene": "ActII_Cliffhanger",
+      "animation": "ActII_EndAnim",
+      "title": "End of Act II",
+      "text": "With three dead (Tony Marston, Mrs. Rogers, General Macarthur), paranoia is at a climax. No one trusts anyone. The storm outside builds, and the final act looms.",
+      "options": [
+        {
+          "text": "Proceed to Act III",
+          "setVariable": { "actProgress": "Act III" },
+          "nextNode": "act3_node1"
+        }
+      ]
+    },
+
+    "act3_node1": {
+      "id": "act3_node1",
+      "act": "Act III",
+      "scene": "ActIII_Morning",
+      "animation": "MorningGatheringAnim",
+      "title": "Morning Gathering: Killer Among Us",
+      "unfoldSteps": [
+        {
+          "text": "Amid howling winds, the survivors gather in the Drawing Room. Each suspects the other."
+        },
+        {
+          "text": "Vera insists on locking all doors. Blore wants to interrogate everyone. Lombard stands by quietly, hand near his concealed revolver."
+        }
+      ],
+      "options": [
+        {
+          "text": "A) Accuse a specific character: 'I saw you sneaking around!'",
+          "effect": {
+            "adjustSuspicion": { "William Blore": 2 }
+          },
+          "nextNode": "act3_node2"
+        },
+        {
+          "text": "B) Propose a group strategy: 'Lock up all weapons, move in pairs.'",
+          "effect": {
+            "adjustTrust": {
+              "Dr. Armstrong": 1,
+              "Vera Claythorne": 1
+            }
+          },
+          "nextNode": "act3_node2"
+        },
+        {
+          "text": "C) Stay silent, watch for slip-ups",
+          "effect": {
+            "adjustSuspicion": { "Judge Wargrave": 1 }
+          },
+          "nextNode": "act3_node2"
+        }
+      ]
+    },
+
+    "act3_node2": {
+      "id": "act3_node2",
+      "act": "Act III",
+      "scene": "ActIII_RogersDeath",
+      "animation": "RogersDeathAnim",
+      "title": "Rogers’s Body Discovered",
+      "unfoldSteps": [
+        {
+          "text": "A shriek outside. Mr. Rogers is found dead near a woodshed, an axe lying beside him."
+        },
+        {
+          "text": "The rhyme’s pattern continues—another figurine gone. Tension reaches a boiling point."
+        }
+      ],
+      "options": [
+        {
+          "text": "A) Investigate immediately for any clues",
+          "effect": {
+            "addClue": "RogersTool"
+          },
+          "nextNode": "act3_node3"
+        },
+        {
+          "text": "B) Fetch Wargrave and Armstrong first",
+          "effect": {
+            "adjustTrust": { "Judge Wargrave": 1, "Dr. Armstrong": 1 }
+          },
+          "nextNode": "act3_node3"
+        },
+        {
+          "text": "C) Retreat in shock, uncertain what to do",
+          "effect": {
+            "adjustSuspicion": { "[playerName]": 2 }
+          },
+          "nextNode": "act3_node3"
+        }
+      ]
+    },
+
+    "act3_node3": {
+      "id": "act3_node3",
+      "act": "Act III",
+      "scene": "ActIII_Paranoia",
+      "animation": "ParanoiaAnim",
+      "title": "Group Fracture",
+      "unfoldSteps": [
+        {
+          "text": "Alliances splinter further. Emily Brent prays, Wargrave suggests forming a tribunal, Lombard wants to search for the hidden killer, Armstrong is panicked."
+        },
+        {
+          "text": "The house’s power flickers. Shadows dance across the walls, fueling the sense of doom."
+        }
+      ],
+      "options": [
+        {
+          "text": "A) Insist no one separates—search together",
+          "effect": {
+            "adjustTrust": { "Emily Brent": 1, "Philip Lombard": 1 }
+          },
+          "nextNode": "act3_node4"
+        },
+        {
+          "text": "B) Pair up with a trusted ally (Vera?)",
+          "effect": {
+            "adjustTrust": { "Vera Claythorne": 2 },
+            "adjustSuspicion": { "William Blore": 1 }
+          },
+          "nextNode": "act3_node4"
+        },
+        {
+          "text": "C) Investigate alone, trusting no one",
+          "effect": {
+            "addClue": "SoloClue"
+          },
+          "nextNode": "act3_node4"
+        }
+      ]
+    },
+
+    "act3_node4": {
+      "id": "act3_node4",
+      "act": "Act III",
+      "scene": "ActIII_Library",
+      "animation": "CriticalRevelationAnim",
+      "title": "Critical Revelation",
+      "unfoldSteps": [
+        {
+          "text": "In the Library, you (or another guest) find damning documents: each victim’s 'crime' matches a line of the nursery rhyme."
+        },
+        {
+          "text": "The killer is punishing hidden sins. Is it one of you? Or is Mr. Owen truly present, hiding in the shadows?"
+        }
+      ],
+      "options": [
+        {
+          "text": "A) Confront everyone with the proof",
+          "nextNode": "act3_node5"
+        },
+        {
+          "text": "B) Confide secretly in Lombard or Vera",
+          "effect": {
+            "adjustTrust": { "Philip Lombard": 1, "Vera Claythorne": 1 }
+          },
+          "nextNode": "act3_node5"
+        },
+        {
+          "text": "C) Keep it secret, hoping to avoid being targeted",
+          "nextNode": "act3_node5"
+        }
+      ]
+    },
+
+    "act3_node5": {
+      "id": "act3_node5",
+      "act": "Act III",
+      "scene": "ActIII_FinalShowdown",
+      "animation": "ShowdownAnim",
+      "title": "Final Showdown",
+      "unfoldSteps": [
+        {
+          "text": "With the figurines dwindling and the storm at its peak, the surviving guests gather in the Dining Hall or a high-cliff veranda—fear etched on every face."
+        },
+        {
+          "text": "You sense the endgame is near. Someone will strike soon, or you must unmask them first."
+        }
+      ],
+      "options": [
+        {
+          "text": "A) Accuse the prime suspect directly",
+          "nextNode": "act3_node6a"
+        },
+        {
+          "text": "B) Wait for a confession or slip-up",
+          "nextNode": "act3_node6b"
+        },
+        {
+          "text": "C) Attempt to escape down the cliff path in the raging storm",
+          "nextNode": "act3_node6c"
+        }
+      ]
+    },
+
+    "act3_node6a": {
+      "id": "act3_node6a",
+      "act": "Act III",
+      "scene": "ActIII_EndVictory",
+      "animation": "KillerRevealAnim",
+      "title": "Ending: Clear Victory",
+      "text": "You unmask the killer just in time. A tense confrontation ends with the murderer subdued. When rescuers finally come, the truth emerges, and a few survivors leave the island alive—but forever changed.",
+      "options": []
+    },
+
+    "act3_node6b": {
+      "id": "act3_node6b",
+      "act": "Act III",
+      "scene": "ActIII_EndTragic",
+      "animation": "TragicEndAnim",
+      "title": "Ending: Partial/Tragic",
+      "text": "Your hesitation allows more bloodshed before the final reveal. Only a handful survive the harrowing ordeal, their minds scarred by guilt and the haunting emptiness of Indian Island.",
+      "options": []
+    },
+
+    "act3_node6c": {
+      "id": "act3_node6c",
+      "act": "Act III",
+      "scene": "ActIII_EndFailure",
+      "animation": "EscapeFailAnim",
+      "title": "Ending: Failed Escape",
+      "text": "Desperate, you flee into the raging storm, seeking any path off the island. Fate intervenes—whether by misstep or killer’s pursuit, you vanish. The island’s secrets remain sealed, and your fate unknown.",
+      "options": []
+    }
+  },
+  "endings": [
+    "Clear Victory: The killer is exposed, survivors rescued.",
+    "Partial/Tragic: Only a few survive to tell the tale.",
+    "Failure: You vanish or die trying to flee, leaving the mystery unsolved."
+  ],
+  "characters": [
+    {
+      "name": "Vera Claythorne",
+      "role": "Secretary",
+      "background": "Former governess. Possibly haunted by a past tragedy with a child.",
+      "motives": "Hired by Mr. Owen for secretarial tasks."
+    },
+    {
+      "name": "Philip Lombard",
+      "role": "Adventurer",
+      "background": "Morally ambiguous past expeditions.",
+      "motives": "Invited to 'look out for trouble.'"
+    },
+    {
+      "name": "William Blore",
+      "role": "Ex-Detective",
+      "background": "Dubious police record, possibly framing innocents once.",
+      "motives": "Employed as private security."
+    },
+    {
+      "name": "Dr. Armstrong",
+      "role": "Physician",
+      "background": "High-profile doctor, rumored malpractice or negligence.",
+      "motives": "Asked to treat Mrs. Owen’s unknown ailment."
+    },
+    {
+      "name": "Emily Brent",
+      "role": "Guest",
+      "background": "Righteous, judgmental moralist. Possibly responsible for a past tragedy.",
+      "motives": "Invited by an 'old acquaintance' she barely recalls."
+    },
+    {
+      "name": "General Macarthur",
+      "role": "Retired Military",
+      "background": "Alleged war scandal or personal regrets.",
+      "motives": "Letter hinted at reuniting with old comrades."
+    },
+    {
+      "name": "Tony Marston",
+      "role": "Socialite",
+      "background": "Reckless partying, rumored involvement in fatal accident.",
+      "motives": "Enticed by the promise of a grand holiday."
+    },
+    {
+      "name": "Judge Wargrave",
+      "role": "Judge",
+      "background": "Harsh rulings, rumored to have manipulated trials.",
+      "motives": "Invitation referencing past courtroom deeds."
+    },
+    {
+      "name": "Mr. Rogers",
+      "role": "Butler",
+      "background": "Employed by Mr. Owen, uneasy about host’s absence.",
+      "motives": "Follows instructions meticulously, overshadowed by tension."
+    },
+    {
+      "name": "Mrs. Rogers",
+      "role": "Housekeeper",
+      "background": "Works with Mr. Rogers, timid, easily frightened.",
+      "motives": "Distressed by rumors of Mr. Owen’s secrecy."
+    }
+  ]
+}

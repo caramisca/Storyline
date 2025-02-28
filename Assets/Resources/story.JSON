@@ -188,7 +188,7 @@
         },
         {
           "text": "Ask Mr. Rogers about Mr. Owen’s absence",
-          "nextNode": "act1_node_askRogers"
+          "nextNode": "act1_node_figures"
         },
         {
           "text": "Proceed to your assigned Guest Room to unpack",

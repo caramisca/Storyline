@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b483020611f992543a3543ebfc019bd5
+guid: 22cd765ed8b0d6e43b27bfe46fb2cc46
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4932357373895891500
-    second: the letter_0
+      213: 8132242196016975836
+    second: Mrs.-Rogers-Found-Dead_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: the letter_0
+      name: Mrs.-Rogers-Found-Dead_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 1792
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c2ad75816e0437440800000000000000
-      internalID: 4932357373895891500
+      spriteID: cdfc809d0378bd070800000000000000
+      internalID: 8132242196016975836
       vertices: []
       indices: 
       edges: []

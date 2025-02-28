@@ -168,28 +168,35 @@ public class StoryManager : MonoBehaviour
     {
         currentStepIndex = 0; // Reset step counter
 
-        // Set background: use "background" if provided, else use "scene".
-        string bgName = !string.IsNullOrEmpty(node.background) ? node.background : node.scene;
-        if (!string.IsNullOrEmpty(bgName))
+        // 1) Attempt to load a background image named the same as the node's ID from Assets/Resources/Backgrounds
+        string nodeBackgroundPath = "Backgrounds/" + node.id; // e.g. "Backgrounds/NodeName"
+        Sprite nodeSprite = Resources.Load<Sprite>(nodeBackgroundPath);
+
+        if (nodeSprite != null)
         {
-            SetBackground(bgName);
+            backgroundImage.sprite = nodeSprite;
+        }
+        else
+        {
+            // If not found, do nothing. The existing background remains.
+            Debug.Log($"No background sprite found at '{nodeBackgroundPath}'. Keeping current background.");
         }
 
+        // 2) Update UI text
         if (titleText != null)
             titleText.text = node.title;
 
-        // Clear previous choices.
+        // 3) Clear any previous choices and hide the container
         ClearChoices();
         HideChoices();
 
-        // If there are unfoldSteps, show them one by one.
+        // 4) If there are unfoldSteps, show them one by one; otherwise show node.text
         if (node.unfoldSteps != null && node.unfoldSteps.Length > 0)
         {
             ShowCurrentStep();
         }
         else
         {
-            // Otherwise show the full text and then create choices.
             dialogueText.text = node.text;
             CreateChoices(node);
         }

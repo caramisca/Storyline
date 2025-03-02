@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nighttime-Tension_0: -239360386143073629
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

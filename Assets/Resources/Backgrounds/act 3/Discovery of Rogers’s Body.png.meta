@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Discovery of Rogers\u2019s Body_0": 8948510632519505720
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

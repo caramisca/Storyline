@@ -674,8 +674,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 360
-  m_fontSizeBase: 360
+  m_fontSize: 301.16
+  m_fontSizeBase: 301.16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1240,6 +1240,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18798aa9b2f44004f912507fb9fb0247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  storyJsonFile: {fileID: 0}
+  dialogueText: {fileID: 0}
+  titleText: {fileID: 0}
+  choicesContainer: {fileID: 0}
+  choiceButtonPrefab: {fileID: 0}
+  backgroundImage: {fileID: 0}
+  fadeOverlay: {fileID: 0}
+  nextButton: {fileID: 0}
+  resetSaveButton: {fileID: 0}
+  musicSource: {fileID: 0}
+  sfxSource: {fileID: 0}
+  buttonClickSFX: {fileID: 0}
+  typingSpeed: 0.03
 --- !u!4 &1251726997
 Transform:
   m_ObjectHideFlags: 0
@@ -1496,7 +1509,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 87
   orthographic: 0
   orthographic size: 5
   m_Depth: 0

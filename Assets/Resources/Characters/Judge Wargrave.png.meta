@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: acb7e064572531f419f65a9ff2dd6c5f
+guid: 4089602e04ee4ac4aa2b7a7c151d1416
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1909456270791077514
-    second: Dr. Armstrong_0
+      213: 6795704256725356730
+    second: Judge Wargrave_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dr. Armstrong_0
+      name: Judge Wargrave_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 84
         y: 0
-        width: 433
-        height: 497
+        width: 414
+        height: 492
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a8ee4ae8c50cf7a10800000000000000
-      internalID: 1909456270791077514
+      spriteID: ab099bc24013f4e50800000000000000
+      internalID: 6795704256725356730
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Dr. Armstrong_0: 1909456270791077514
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5e2ea67df36079a449063de7fd660353
+guid: 776bfbffc9a6b27409d47faa3c38d267
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8663968192117718588
-    second: Mrs. Rohers_0
+      213: 4169197797714365623
+    second: Tony Marston_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,29 +96,16 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mrs. Rohers_0
+      name: Tony Marston_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 77
         y: 0
-        width: 498
+        width: 421
         height: 501
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3eb574ca299c3870800000000000000
-      internalID: 8663968192117718588
+      spriteID: 7bc0b13ce47fbd930800000000000000
+      internalID: 4169197797714365623
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Mrs. Rohers_0: 8663968192117718588
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

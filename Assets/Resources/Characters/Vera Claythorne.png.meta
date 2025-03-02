@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7f88d915dade1b1428783c3a5f4a8f1c
+guid: 2ac32989a4b46184aaed16b491836dde
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7964037396092704640
-    second: Emily Brent_0
+      213: 4160217820120300684
+    second: Vera Claythorne_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Emily Brent_0
+      name: Vera Claythorne_0
       rect:
         serializedVersion: 2
-        x: 21
+        x: 70
         y: 0
-        width: 440
-        height: 499
+        width: 426
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 087580401d1f58e60800000000000000
-      internalID: 7964037396092704640
+      spriteID: c8c358cc0101cb930800000000000000
+      internalID: 4160217820120300684
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Emily Brent_0: 7964037396092704640
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

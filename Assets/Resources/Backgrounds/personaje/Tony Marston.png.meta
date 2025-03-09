@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f6eae657b25090c4abc8f9204cfe0fb9
+guid: 776bfbffc9a6b27409d47faa3c38d267
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7964037396092704640
-    second: Emily Brent_0
+      213: 4169197797714365623
+    second: Tony Marston_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Emily Brent_0
+      name: Tony Marston_0
       rect:
         serializedVersion: 2
-        x: 21
+        x: 77
         y: 0
-        width: 440
-        height: 499
+        width: 421
+        height: 501
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 087580401d1f58e60800000000000000
-      internalID: 7964037396092704640
+      spriteID: 7bc0b13ce47fbd930800000000000000
+      internalID: 4169197797714365623
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tony Marston_0: 4169197797714365623
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

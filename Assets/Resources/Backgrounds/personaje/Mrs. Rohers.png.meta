@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 75cd2ec9bd7dd734d9944bd72d6b31ee
+guid: 7922677e0f4e9ac438a8bb317580eedd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1909456270791077514
-    second: Dr. Armstrong_0
+      213: 8663968192117718588
+    second: Mrs. Rohers_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dr. Armstrong_0
+      name: Mrs. Rohers_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 433
-        height: 497
+        width: 498
+        height: 501
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a8ee4ae8c50cf7a10800000000000000
-      internalID: 1909456270791077514
+      spriteID: c3eb574ca299c3870800000000000000
+      internalID: 8663968192117718588
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mrs. Rohers_0: 8663968192117718588
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

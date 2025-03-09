@@ -828,7 +828,12 @@
       "animation": "KillerRevealAnim",
       "title": "Ending: Clear Victory",
       "text": "You unmask the killer just in time. A tense confrontation ends with the murderer subdued. When rescuers finally come, the truth emerges, and a few survivors leave the island alive—but forever changed.",
-      "options": []
+      "options": [
+        {
+          "text": "Restart the Story",
+          "nextNode": "act1_node1"
+        }
+      ]
     },
 
     "act3_node6b": {
@@ -838,7 +843,12 @@
       "animation": "TragicEndAnim",
       "title": "Ending: Partial/Tragic",
       "text": "Your hesitation allows more bloodshed before the final reveal. Only a handful survive the harrowing ordeal, their minds scarred by guilt and the haunting emptiness of Indian Island.",
-      "options": []
+      "options": [
+        {
+          "text": "Restart the Story",
+          "nextNode": "act1_node1"
+        }
+      ]
     },
 
     "act3_node6c": {
@@ -848,7 +858,12 @@
       "animation": "EscapeFailAnim",
       "title": "Ending: Failed Escape",
       "text": "Desperate, you flee into the raging storm, seeking any path off the island. Fate intervenes—whether by misstep or killer’s pursuit, you vanish. The island’s secrets remain sealed, and your fate unknown.",
-      "options": []
+      "options": [
+        {
+          "text": "Restart the Story",
+          "nextNode": "act1_node1"
+        }
+      ]
     }
   },
   "endings": [

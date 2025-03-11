@@ -163,6 +163,11 @@
             }
           },
           "nextNode": "act1_node5"
+        },
+        {
+          "text": "Go Back",
+          "setVariable": { "actProgress": "Act II" },
+          "nextNode": "act1_node3"
         }
       ]
     },

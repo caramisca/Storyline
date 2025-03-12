@@ -167,7 +167,7 @@
         {
           "text": "Go Back",
           "setVariable": { "actProgress": "Act II" },
-          "nextNode": "act1_node3"
+          "nextNode": "act1_node2"
         }
       ]
     },

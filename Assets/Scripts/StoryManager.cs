@@ -42,6 +42,13 @@ public class StoryManager : MonoBehaviour
             Debug.LogError("No EventSystem found in the scene. Please add one to capture UI clicks.");
         }
 
+        // Added background music
+        if (musicSource != null && musicSource.clip != null)
+        {
+            musicSource.loop = true; // Loop the background music
+            musicSource.Play();
+        }
+
         // Set up Next button click event.
         if (nextButton != null)
             nextButton.onClick.AddListener(AdvanceStep);
